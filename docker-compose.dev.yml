@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+   notes:
+      build:
+         context: .
+      ports:
+         - 3081:3081
+         - 9229:9229
+      volumes:
+         - ./:/app
+      command: npm run debug
+   mongo:
+      image: mongo:4.2.8
+      ports:
+         - 27017:27017
+      volumes:
+         - mongodb:/data/db
+         - mongodb_config:/data/configdb
+volumes:
+   mongodb:
+   mongodb_config:
