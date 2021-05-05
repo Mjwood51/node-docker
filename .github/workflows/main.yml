@@ -6,8 +6,7 @@ name: CI to Docker Hub
 on:
   # Triggers the workflow on push or pull request events but only for specific versions marked 'v'
   push:
-    tags:
-      - 'v*'
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
