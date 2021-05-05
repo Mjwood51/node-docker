@@ -35,7 +35,7 @@ app.post('/test', function(req, res){
 });
 
 app.get('/test', function(req, res){
-    console.log(data);
+    console.log(data);  //changes for testing
     res.send(data);
 });
 
