@@ -7,7 +7,7 @@ on:
   # Triggers the workflow on push or pull request events but only for specific versions marked 'v'
   push:
     branches: [ master ]
-    tags: ghcr.io/${{ github.repository_owner }}/node-docker:latest
+    tags: ghcr.io/mjwood51/node-docker:latest
   pull_request:
     branches: [ master ]
 
@@ -44,8 +44,8 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_TOKEN }}
+          username: mjwood51
+          password: ${{ secrets.GHUB_TOKEN }}
           
       - name: Buld and push
         id: docker_build
