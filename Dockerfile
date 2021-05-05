@@ -1,7 +1,7 @@
 #syntax=docker/dockerfile:1
 FROM node:14.15.4 as base
 # ENV NODE_ENV=production
-# RUN mkdir -p /app //here are some changes //here are some more
+# RUN mkdir -p /app //here are some changes //here are some
 WORKDIR /app
 
 COPY package.json package.json
