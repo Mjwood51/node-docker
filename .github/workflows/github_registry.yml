@@ -44,7 +44,7 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: mjwood51
+          username: Mjwood51
           password: ${{ secrets.GHUB_TOKEN }}
           
       - name: Buld and push
