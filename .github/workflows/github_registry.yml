@@ -6,9 +6,10 @@ name: CI to Github Registry
 on:
   # Triggers the workflow on push or pull request events but only for specific versions marked 'v'
   push:
-    #branches: [ master ]
+    branches: [ master ]
+    tags: ghcr.io/${{ github.repository_owner }}/node-docker:latest
   pull_request:
-    #branches: [ master ]
+    branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
