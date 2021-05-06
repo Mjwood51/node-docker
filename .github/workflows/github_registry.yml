@@ -44,8 +44,8 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: Mjwood51
-          password: ${{ secrets.GHUB_TOKEN }}
+          username: mjwood51
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
           
       - name: Buld and push
         id: docker_build
