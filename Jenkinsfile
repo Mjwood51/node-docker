@@ -1,12 +1,11 @@
 pipeline {
-    
-    stages {
-        stage('Initialize')
+    stage('Initialize')
         {
             def dockerHome = tool 'MyDocker'
-            env.PATH = "${dockerHome}/bin:${env.PATH}"
-            
+            env.PATH = "${dockerHome}/bin:${env.PATH}"           
         }
+    stages {
+        
         agent { docker { image 'node:14-alpine' } }
         stage('build') {
             steps {
